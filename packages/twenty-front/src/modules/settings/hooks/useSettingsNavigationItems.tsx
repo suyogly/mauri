@@ -6,7 +6,8 @@ import { currentWorkspaceMemberState } from '@/auth/states/currentWorkspaceMembe
 import { billingState } from '@/client-config/states/billingState';
 import { supportChatState } from '@/client-config/states/supportChatState';
 import { usePermissionFlagMap } from '@/settings/roles/hooks/usePermissionFlagMap';
-import { getDocumentationUrl } from '@/support/utils/getDocumentationUrl';
+// mauri: documentation removed — Mauri docs are external, no in-app link
+// import { getDocumentationUrl } from '@/support/utils/getDocumentationUrl';
 import {
   type NavigationDrawerItemIndentationLevel,
   type NavigationDrawerItemModifier,
@@ -23,7 +24,8 @@ import {
   type IconComponent,
   IconCurrencyDollar,
   IconDoorEnter,
-  IconHelpCircle,
+  // mauri: unused after documentation item removed
+  // IconHelpCircle,
   IconHierarchy2,
   IconKey,
   IconMail,
@@ -196,15 +198,16 @@ const useSettingsNavigationItems = (): SettingsNavigationSection[] => {
           Icon: IconMessage,
           isHidden: !isSupportChatConfigured,
         },
-        {
-          label: t`Documentation`,
-          onClick: () =>
-            window.open(
-              getDocumentationUrl({ locale: currentWorkspaceMember?.locale }),
-              '_blank',
-            ),
-          Icon: IconHelpCircle,
-        },
+        // mauri: documentation removed — Mauri docs are external, no in-app link
+        // {
+        //   label: t`Documentation`,
+        //   onClick: () =>
+        //     window.open(
+        //       getDocumentationUrl({ locale: currentWorkspaceMember?.locale }),
+        //       '_blank',
+        //     ),
+        //   Icon: IconHelpCircle,
+        // },
         {
           label: t`Logout`,
           onClick: signOut,
