@@ -27,6 +27,10 @@ export const BackgroundMockNavigationDrawer = ({
   const isMobile = useIsMobile();
   const { t } = useLingui();
 
+  // mauri: navigation drawer hidden — login background is now a full image, no mock nav needed
+  return null;
+
+  /* original return preserved for upstream merge reference:
   return (
     <NavigationDrawer className={className} title={DEFAULT_WORKSPACE_NAME}>
       {!isMobile && (
@@ -73,4 +77,5 @@ export const BackgroundMockNavigationDrawer = ({
       </NavigationDrawerSection>
     </NavigationDrawer>
   );
+  */
 };
