@@ -26,38 +26,16 @@ const StyledTableContainer = styled.div`
 
 export const BackgroundMockPage = () => {
   return (
-    <PageContainer>
-      <PageHeader
-        title={t`Companies`}
-        Icon={() => (
-          <TintedIconTile Icon={IconBuildingSkyscraper} color="blue" />
-        )}
-      >
-        <Button
-          Icon={IconPlus}
-          title={t`New Company`}
-          variant="primary"
-          accent="default"
-          size="small"
-        />
-        <LightIconButton
-          Icon={IconDotsVertical}
-          accent="tertiary"
-          size="small"
-        />
-        <Button
-          Icon={IconLayoutSidebarRight}
-          variant="secondary"
-          accent="default"
-          size="small"
-        />
-      </PageHeader>
-      <PageBody>
-        <StyledTableContainer>
-          <BackgroundMockViewBar />
-          <BackgroundMockTable />
-        </StyledTableContainer>
-      </PageBody>
-    </PageContainer>
+    // mauri: replaced Twenty mock CRM background with Mauri beehive image
+    <div
+      style={{
+        width: '100%',
+        height: '100%',
+        backgroundImage: 'url(/images/mauri-login-bg.svg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+    />
   );
 };
