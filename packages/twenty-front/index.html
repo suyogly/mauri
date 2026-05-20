@@ -3,13 +3,15 @@
   <head>
     <meta charset="UTF-8" />
 
+    <!-- mauri: replaced Twenty favicon with Mauri logo -->
     <link
       rel="icon"
-      type="image/x-icon"
-      href="/images/icons/android/android-launchericon-48-48.png"
+      type="image/png"
+      href="/images/mauri-logo.png"
       data-rh="true"
     />
-    <link rel="apple-touch-icon" href="/images/icons/ios/192.png" />
+    <!-- mauri: replaced apple touch icon with Mauri logo -->
+    <link rel="apple-touch-icon" href="/images/mauri-logo.png" />
     <link rel="manifest" href="/manifest.json" />
 
     <meta name="theme-color" content="#000000" />
@@ -70,6 +72,11 @@
         --theme-dark-background-tertiary: #1d1d1d;
         /* THEME_LIGHT.background.tertiary */
         --theme-light-background-tertiary: #f1f1f1;
+
+        /* mauri: remove dark backdrop on login page */
+        [data-testid="modal-backdrop"] {
+        background: transparent !important;
+}
       }
 
       @media (prefers-color-scheme: dark) {
