@@ -12,7 +12,11 @@ const StyledModalBackdrop = styled.div<{
   background: ${({ overlay, isInContainer }) =>
     isInContainer || overlay === 'light'
       ? themeCssVariables.background.overlayTertiary
-      : themeCssVariables.background.overlayPrimary};
+      : overlay === 'dark'
+        ? themeCssVariables.background.overlayPrimary
+        : 'transparent'};
+  /* mauri: transparent overlay now renders no backdrop — allows beehive background to show */
+
   display: flex;
   height: 100%;
   justify-content: center;

@@ -1,9 +1,9 @@
 import { styled } from '@linaria/react';
+import { ThemeContext, themeCssVariables } from '@ui/theme-constants';
 import { AnimatePresence, motion } from 'framer-motion';
 import React, { useContext, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { isDefined } from 'twenty-shared/utils';
-import { ThemeContext, themeCssVariables } from '@ui/theme-constants';
 
 import { type ModalOverlay } from '../types/ModalOverlay';
 import { type ModalPadding } from '../types/ModalPadding';
