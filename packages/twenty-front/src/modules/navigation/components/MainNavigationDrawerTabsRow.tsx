@@ -150,9 +150,11 @@ export const MainNavigationDrawerTabsRow = () => {
 
   const isExpanded = isNavigationDrawerExpanded || isMobile;
 
-  if (!hasAiSettingsPermission) {
-    return null;
-  }
+  // mauri: AI chat hidden — not configured for Mauri deployments
+  // if (!hasAiSettingsPermission) {
+  //   return null;
+  // }
+  return null;
 
   const handleTabClick = (tab: NavigationDrawerActiveTab) => () => {
     setNavigationDrawerActiveTab(tab);
