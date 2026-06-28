@@ -3,7 +3,7 @@ name: mauri
 services:
   server:
     build:
-      context: .
+      context: ../..
       dockerfile: Dockerfile
     volumes:
       - server-local-data:/app/packages/twenty-server/.local-storage
@@ -46,7 +46,7 @@ services:
 
   worker:
     build:
-      context: .
+      context: ../..
       dockerfile: Dockerfile
     volumes:
       - server-local-data:/app/packages/twenty-server/.local-storage
